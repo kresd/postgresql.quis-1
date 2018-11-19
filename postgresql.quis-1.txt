@@ -1,0 +1,54 @@
+/* Author : Kresnamal Yuda */
+
+Nomor 1 :
+hr=# select *
+	from employees
+	order by email desc;
+
+Nomor 2 :
+hr=# select *
+	from employees
+	where (salary > 3200) and (salary <= 12000);
+
+Nomor 3 :
+hr=# select *
+	from employees
+	where first_name LIKE 'A%';
+
+Nomor 4 :
+hr=# select *
+	from employees
+	where employee_id IN (103, 115, 196, 187, 102, 100);
+
+Nomor 5 :
+hr=# select *
+	from employees
+	where last_name LIKE '_u%';
+
+Nomor 6 :
+hr=# select
+	distinct department_id as kode_department
+	from employees;
+
+Nomor 7 :
+hr=# select
+	concat (first_name, ' ', last_name) as nama_lengkap,
+	job_id as kode_jabatan,
+	salary as gaji_setahun
+	from employees
+	where manager_id = 100;
+
+Nomor 8 :
+hr=# select
+	last_name as nama_belakang,
+	salary as gaji_perbulan,
+	job_id as kode_jabatan
+	from employees
+	where commission_pct is null;
+
+Nomor 9 :
+hr=# select *
+	from employees
+	where not(job_id = 'IT_PROG') and not(job_id='SH_CLERK');
+
+
